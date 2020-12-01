@@ -28,7 +28,7 @@ class CustomerQueueSystem extends Component {
                 <ListGroup variant="flush">
                     <ListGroup.Item>Tables Required : {tablesRequired} <Emoji symbol={'🍽'}></Emoji> </ListGroup.Item>
                     <ListGroup.Item>Please head to Table: {JSON.stringify(randomTables, null, " ")}</ListGroup.Item>
-                    <ListGroup.Item> <Button variant={'primary'} onClick={this.props.handleTryAgainButton}>Try Again</Button></ListGroup.Item>
+                    <ListGroup.Item> <Button variant={'primary'} onClick={this.props.handleTryAgainButton}>Reset</Button></ListGroup.Item>
                 </ListGroup>
             </Card>
         )
