@@ -1,11 +1,11 @@
 import React, {Component} from 'react'
-import HeaderMenu from "./HeaderMenu";
+import FunctionTabs from "./FunctionTabs";
 
 class App extends Component {
     render() {
         return (
-            <div className="container">
-                <HeaderMenu/>
+            <div>
+                <FunctionTabs/>
             </div>
         )
     }

@@ -1,0 +1,198 @@
+/* Function Tabs Styling */
+.function-tabs-container {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 0;
+}
+
+.tabs-header {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 30px 0;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 30px;
+}
+
+.app-title {
+    color: white;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.title-icon {
+    font-size: 3.5rem;
+    animation: pulse 2s infinite;
+}
+
+.version-badge {
+    background: #28a745;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    box-shadow: 0 2px 10px rgba(40, 167, 69, 0.3);
+}
+
+.app-subtitle {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2rem;
+    margin-bottom: 0;
+    font-weight: 300;
+}
+
+/* Custom Tabs Styling */
+.custom-tabs {
+    justify-content: center;
+    border-bottom: none;
+    margin-bottom: 30px;
+}
+
+.custom-tabs .nav-link {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    margin: 0 8px;
+    padding: 12px 24px;
+    color: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+    min-width: 140px;
+}
+
+.custom-tabs .nav-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.custom-tabs .nav-link.active {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.5);
+    color: white;
+    font-weight: 600;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.tab-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tab-icon {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.tab-text {
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.custom-tabs .nav-link:hover .tab-icon,
+.custom-tabs .nav-link.active .tab-icon {
+    transform: scale(1.2);
+}
+
+/* Tab Content Wrapper */
+.tab-content-wrapper {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 30px;
+    margin: 0 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    animation: fadeInUp 0.5s ease;
+    min-height: 500px;
+}
+
+/* Animations */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .app-title {
+        font-size: 2rem;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .title-icon {
+        font-size: 2.5rem;
+    }
+    
+    .custom-tabs {
+        flex-wrap: wrap;
+    }
+    
+    .custom-tabs .nav-link {
+        margin: 5px;
+        min-width: 120px;
+        padding: 10px 20px;
+    }
+    
+    .tab-content-wrapper {
+        margin: 0 10px;
+        padding: 20px;
+    }
+    
+    .tab-icon {
+        font-size: 1rem;
+    }
+    
+    .tab-text {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .tabs-header {
+        padding: 20px 0;
+    }
+    
+    .app-title {
+        font-size: 1.8rem;
+    }
+    
+    .app-subtitle {
+        font-size: 1rem;
+        padding: 0 20px;
+    }
+    
+    .custom-tabs .nav-link {
+        min-width: 100px;
+        padding: 8px 16px;
+    }
+}
